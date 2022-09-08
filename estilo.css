@@ -1,0 +1,35 @@
+main{
+    border: 1px solid black;
+    background-color:gainsboro;
+    width: 450px;
+}
+
+.casa{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+}
+.linha{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("fundo.webp");
+    font-size: 25px;
+    color:grey;
+}
+#resultado{
+    font-size: 50px;
+    color:grey;
+}
+#btnJogarNovamente{
+    display: none;
+}
