@@ -63,7 +63,11 @@ function verifica_ganhador() {
     else if (casa03.innerHTML != "" && casa03.innerHTML === casa05.innerHTML && casa03.innerHTML === casa07.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa03.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+    } else if (casa01.innerHTML != "" && casa02.innerHTML != "" && casa03.innerHTML != "" && casa04.innerHTML != "" && casa05.innerHTML != "" && casa06.innerHTML != "" && casa07.innerHTML != "" && casa08.innerHTML != "" && casa09.innerHTML != "") {
+        resultadoNaTela = "Deu Velha :("
+        btnJogar.style.display = "inline";
     }
+
     document.getElementById('resultado').innerHTML = resultadoNaTela;
 }
 
