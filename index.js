@@ -11,9 +11,12 @@ let casa07 = document.getElementById("casa07");
 let casa08 = document.getElementById("casa08");
 let casa09 = document.getElementById("casa09");
 let btnJogar = document.getElementById("btnJogarNovamente");
+let placar = document.getElementById("placar");
 
 let resultadoNaTela = "";
-
+let vitoriasX = 0;
+let vitoriasO = 0;
+let vencedor = "";
 
 function jogada(casa) {
     if (casa.innerHTML === "") {
@@ -35,42 +38,57 @@ function verifica_ganhador() {
     if (casa01.innerHTML != "" && casa01.innerHTML === casa02.innerHTML && casa01.innerHTML === casa03.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa01.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa01.innerHTML;
     }
     else if (casa04.innerHTML != "" && casa04.innerHTML === casa05.innerHTML && casa04.innerHTML === casa06.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa04.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa04.innerHTML;
     }
     else if (casa07.innerHTML != "" && casa07.innerHTML === casa08.innerHTML && casa07.innerHTML === casa09.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa07.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa07.innerHTML;
     }
     else if (casa01.innerHTML != "" && casa01.innerHTML === casa04.innerHTML && casa01.innerHTML === casa07.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa01.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa01.innerHTML;
     }
     else if (casa02.innerHTML != "" && casa02.innerHTML === casa05.innerHTML && casa02.innerHTML === casa08.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa02.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa02.innerHTML;
     }
     else if (casa03.innerHTML != "" && casa03.innerHTML === casa06.innerHTML && casa03.innerHTML === casa09.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa03.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa03.innerHTML;
     }
     else if (casa01.innerHTML != "" && casa01.innerHTML === casa05.innerHTML && casa01.innerHTML === casa09.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa01.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
+        vencedor = casa01.innerHTML;
     }
     else if (casa03.innerHTML != "" && casa03.innerHTML === casa05.innerHTML && casa03.innerHTML === casa07.innerHTML) {
         resultadoNaTela = "Parabéns jogador " + casa03.innerHTML + "! Você ganhou! "
         btnJogar.style.display = "inline";
-    } else if (casa01.innerHTML != "" && casa02.innerHTML != "" && casa03.innerHTML != "" && casa04.innerHTML != "" && casa05.innerHTML != "" && casa06.innerHTML != "" && casa07.innerHTML != "" && casa08.innerHTML != "" && casa09.innerHTML != "") {
+        vencedor = casa03.innerHTML;
+    } 
+    else if (casa01.innerHTML != "" && casa02.innerHTML != "" && casa03.innerHTML != "" && casa04.innerHTML != "" && casa05.innerHTML != "" && casa06.innerHTML != "" && casa07.innerHTML != "" && casa08.innerHTML != "" && casa09.innerHTML != "") {
         resultadoNaTela = "Deu Velha :("
         btnJogar.style.display = "inline";
     }
 
     document.getElementById('resultado').innerHTML = resultadoNaTela;
 }
-
+function vitoria(vencedor) {
+    if (vencedor === "X") {
+        vitoriasX += 1;
+    } else {
+        vitoriasO += 1;
+    }
+}
 function reiniciar() {
     jogador = "X";
     casa01.innerHTML = "";

@@ -33,3 +33,11 @@ body{
 #btnJogarNovamente{
     display: none;
 }
+#placar{
+    border: 1px solid black;
+    width: 300px;
+    width: 300px;
+}
+h1, h3{
+    color:grey;
+}
