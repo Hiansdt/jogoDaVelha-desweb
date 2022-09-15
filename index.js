@@ -87,8 +87,9 @@ function vitoria(vencedor) {
     } else {
         vitoriasO += 1;
     }
-    placar.innerHTML = `<p>X: ${vitoriasX}</p>
+    placar.innerHTML = `<h3>Placar</h3> <p>X: ${vitoriasX}</p>
     <p>O: ${vitoriasO} </p>`;
+    placar.style.display = "block";
 }
 function reiniciar() {
     jogador = "X";

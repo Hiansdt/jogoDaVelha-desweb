@@ -34,9 +34,11 @@ body{
     display: none;
 }
 #placar{
-    border: 1px solid black;
-    width: 300px;
-    width: 300px;
+    border: 2px solid black;
+    width: 150px;
+    width: 150px;
+    text-align: center;
+    display: none;
 }
 h1, h3{
     color:grey;
