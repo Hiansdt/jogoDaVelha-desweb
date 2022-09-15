@@ -1,5 +1,6 @@
 
 let jogador = "X";
+let partida_continua = true;
 
 let casa01 = document.getElementById("casa01");
 let casa02 = document.getElementById("casa02");
@@ -18,7 +19,7 @@ let vitoriasX = 0;
 let vitoriasO = 0;
 
 function jogada(casa) {
-    if (casa.innerHTML === "") {
+    if (casa.innerHTML === "" && partida_continua === true) {
         casa.innerHTML = jogador;
         alterna_jogador();
 
@@ -82,6 +83,7 @@ function verifica_ganhador() {
     document.getElementById('resultado').innerHTML = resultadoNaTela;
 }
 function vitoria(vencedor) {
+    partida_continua = false;
     if (vencedor === "X") {
         vitoriasX += 1;
     } else {
@@ -92,6 +94,7 @@ function vitoria(vencedor) {
     placar.style.display = "block";
 }
 function reiniciar() {
+    partida_continua = true;
     jogador = "X";
     casa01.innerHTML = "";
     casa02.innerHTML = "";
