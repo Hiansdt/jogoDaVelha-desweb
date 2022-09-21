@@ -1,11 +1,12 @@
 main{
     border: 1px solid black;
-    background-color:gainsboro;
+    background-color:rgba(255, 146, 197, 0.521);
     width: 450px;
+    border-radius: 10px;
 }
 
 .casa{
-    border: 1px solid black;
+    border: 1px solid rgb(255, 209, 209);
     width: 150px;
     height: 150px;
     font-size: 80px;
@@ -22,23 +23,33 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-image: url("fundo.webp");
+    background-image: url("mariozao.gif");
     font-size: 25px;
-    color:grey;
+    color:rgb(255, 255, 255);
     
 }
 #resultado{
     font-size: 50px;
-    color:grey;
+    color:rgb(255, 255, 255);
 }
 #btnJogarNovamente{
     display: none;
+    font-size:large;
+    background-color: rgba(0, 75, 59, 0.418);
+    color: rgb(255, 209, 243);
 }
 #placar{
-    border: 2px solid black;
+    border: 3px solid rgba(111, 0, 255, 0.753);
+    background-color: rgba(43, 43, 43, 0.603);
     width: 150px;
     width: 150px;
     text-align: center;
     display: none;
-    border-radius: 10px 10px ;
+    border-radius: 5px;
+}
+h1{
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 10px;
+    border: 2px solid white;
 }
